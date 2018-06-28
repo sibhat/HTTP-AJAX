@@ -1,0 +1,52 @@
+.friends{
+    /* border: 1px solid red; */
+    max-width: 700px;
+    margin: auto;
+    margin-top: 50px;
+}
+.friend{
+    border: 1px solid yellow;
+    width: 400px;
+    margin: auto;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.friend span{
+    margin: 0 10px;
+}
+.name{
+    font-weight: 600;
+    font-size: 18px;
+}
+.newFriend input{
+    display: block;
+    margin: auto;
+    width: 300px;
+    padding: 10px 0 10px 20px;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+input['submit']{
+    font-size: 10px;
+}
+.newFriend input:not(:last-child){
+    margin-bottom: 10px;
+}
+.newFriend .btn__save{
+    width: 60px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(153, 153, 153, 0.219);
+    border: 1px solid rgba(153, 153, 153, 0.219);
+}
+.btn__add{
+    margin-bottom: 10px;
+}

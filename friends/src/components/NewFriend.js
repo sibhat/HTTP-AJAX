@@ -1,10 +1,17 @@
 import React from 'react';
-
-const NewFriend = ({newFriend, addFriend, handleNewFriend, newEmail, newAge}) =>{ 
+import './friend.css'
+import { Link } from 'react-router-dom';
+const NewFriend = ({newFriend, addFriend, handleNewFriend, history, newEmail, newAge}) =>{ 
+  const redirectToTarget = () => {
+    history.push(`/`)
+  }
     return (
-      <div className="app__newFriend">
+      <div className="newFriend">
       <form onSubmit={e => {e.preventDefault();
-                              addFriend()}}
+                              addFriend()
+                              redirectToTarget()
+                              }}
+
                             >
         <input type="text" 
                 name="newFriend" 
@@ -28,8 +35,9 @@ const NewFriend = ({newFriend, addFriend, handleNewFriend, newEmail, newAge}) =>
                onChange={handleNewFriend}
                value={newEmail}
                required/>
-               <input type="submit" value="Save"/>
+        <input type="submit" value="Save" className="btn__save"/>
       </form>
+        <Link to='/'>cancle</Link>
       </div>
     );
   }
